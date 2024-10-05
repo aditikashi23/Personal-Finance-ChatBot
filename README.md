@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Personal Finance Chatbot** is an interactive virtual assistant built using **Rasa**, designed to help users manage their finances by tracking expenses, setting budgets, and checking currency exchange rates and stock prices. This chatbot leverages Natural Language Understanding (NLU) to understand user intents and extract relevant entities, providing a user-friendly interface for personal finance management.
+The **Personal Finance Chatbot** is an interactive virtual assistant built using **Rasa**, designed to help users manage their finances by tracking expenses, setting budgets, and checking currency exchange rates and stock prices. The chatbot uses Rasa, REST APIs, and some Python.
 
 ### Features
 
