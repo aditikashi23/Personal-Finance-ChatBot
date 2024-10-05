@@ -1,0 +1,22 @@
+version: "2.0"
+
+stories:
+- story: Track expense story
+  steps:
+  - intent: track_expense
+  - action: action_track_expense
+
+- story: Set budget story
+  steps:
+  - intent: set_budget
+  - action: action_set_budget
+
+- story: Check currency story
+  steps:
+  - intent: check_currency
+  - action: action_check_currency
+
+- story: Check stock price story
+  steps:
+  - intent: check_stock_price
+  - action: action_check_stock_price
