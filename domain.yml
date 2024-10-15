@@ -1,20 +1,17 @@
-version: "2.0"
+version: "3.1"
 
-# Define the intents the bot can understand
 intents:
-  - track_expense
   - set_budget
-  - check_currency
   - check_stock_price
+  - check_currency  # Add missing intent
 
-# Define the entities that can be extracted
 entities:
   - amount
   - category
-  - currency
   - stock_symbol
+  - currency_from
+  - currency_to
 
-# Define the slots to store entity values during a conversation
 slots:
   amount:
     type: float
@@ -26,40 +23,24 @@ slots:
     mappings:
       - type: from_entity
         entity: category
-  currency:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: currency
   stock_symbol:
     type: text
     mappings:
       - type: from_entity
         entity: stock_symbol
+  currency_from:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: currency_from
+  currency_to:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: currency_to
 
-# Define the actions the bot can perform
 actions:
-  - action_track_expense
   - action_set_budget
-  - action_check_currency
   - action_check_stock_price
+  - action_check_currency  # Add missing action
 
-# Define responses that the bot can give
-responses:
-  utter_ask_category:
-    - text: "What category is this expense for?"
-  utter_ask_amount:
-    - text: "How much was this expense?"
-  utter_budget_set:
-    - text: "Budget of {amount} set for {category}."
-  utter_expense_tracked:
-    - text: "Tracked {amount} for {category}."
-  utter_currency_conversion:
-    - text: "{amount} {currency} is equivalent to {converted_amount} {target_currency}."
-  utter_stock_price:
-    - text: "The current stock price of {stock_symbol} is {latest_price} USD."
-
-# Configuring session settings
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
