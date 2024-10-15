@@ -53,7 +53,7 @@ class ActionCheckExchangeRate(Action):
         currency_to = tracker.get_slot("currency_to")
         
         if currency_from and currency_to:
-            # Example exchange rate API (you would replace this with a real API)
+
             api_key = "3d5b0a42a1144636a5f26da51d6e8884"
             url = f"https://openexchangerates.org/api/latest.json?app_id={api_key}"
             response = requests.get(url).json()
