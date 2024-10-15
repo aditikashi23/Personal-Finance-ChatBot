@@ -30,7 +30,7 @@ Follow these steps to set up and run the Personal Finance Chatbot locally:
 
 #### Current Progress
 - 10/05: Files are complete. Chatbot is running, but working on resolving action.py endpoint errors
-- -10/15: Updated code to better respond to prompts and fix endpoint errors. Accurate responses for budget setting, but some API connection errors need to be resolved.
+- 10/15: Updated code to better respond to prompts and fix endpoint errors. Accurate responses for budget setting, but some API connection errors need to be resolved.
 
 
 
