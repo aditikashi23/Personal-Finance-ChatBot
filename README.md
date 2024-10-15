@@ -26,10 +26,11 @@ Follow these steps to set up and run the Personal Finance Chatbot locally:
 2. **Install Rasa**
 3. **Run** rasa train
 4. **Run** rasa run actions in another terminal
-5. **Run** rasa shell -model "model_path"
+5. **Run** rasa shell --model "model_path"
 
 #### Current Progress
 - 10/05: Files are complete. Chatbot is running, but working on resolving action.py endpoint errors
+- -10/15: Updated code to better respond to prompts and fix endpoint errors. Accurate responses for budget setting, but some API connection errors need to be resolved.
 
 
 
