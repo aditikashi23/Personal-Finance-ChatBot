@@ -1,34 +1,40 @@
-version: "2.0"
-
+version: "3.1"
 nlu:
-- intent: track_expense
-  examples: |
-    - I spent $50 on groceries
-    - I spent 100 dollars on rent
-    - add an expense of $30 for dinner
-    - I just spent $20 on gas
-    - add a new expense: $15 on coffee
+  
+  # Intent to track expenses
+  - intent: set_budget
+    examples: |
+      - I spent [50](amount) dollars on [groceries](category)
+      - I spent [200](amount) on [entertainment](category)
+      - I just spent [100](amount) on [food](category)
+      - Add an expense of [30](amount) dollars for [transportation](category)
+      - I paid [500](amount) for [rent](category)
+      - Log [150](amount) as an expense for [shopping](category)
+      - Record an expense of [80](amount) dollars for [utilities](category)
+      - Spent [20](amount) on [coffee](category)
+      - I used [120](amount) dollars for [healthcare](category)
+      - Add [45](amount) for [clothes](category)
 
-- intent: set_budget
-  examples: |
-    - set my budget to $500 for groceries
-    - I want to allocate 1000 dollars for entertainment
-    - set my budget for travel at $300
-    - create a budget of $200 for food
-    - set up a $600 budget for shopping
+  # Intent to check stock price
+  - intent: check_stock_price
+    examples: |
+      - What is the current price of [AAPL](stock_symbol)?
+      - Tell me the stock price of [GOOGL](stock_symbol)
+      - How much is [TSLA](stock_symbol) trading at right now?
+      - What's the stock price for [MSFT](stock_symbol)?
+      - Get me the latest stock price for [FB](stock_symbol)
+      - How is [NFLX](stock_symbol) performing today?
+      - Can you tell me the price of [AMZN](stock_symbol)?
+      - Give me the stock value of [IBM](stock_symbol)
+      - Check the stock price for [ORCL](stock_symbol)
 
-- intent: check_currency
-  examples: |
-    - What is the exchange rate between USD and EUR?
-    - convert 100 USD to GBP
-    - currency conversion for 50 Euros to USD
-    - how much is 200 JPY in USD?
-    - give me the exchange rate between AUD and CAD
-
-- intent: check_stock_price
-  examples: |
-    - What is the current price of Apple stock?
-    - Give me the latest stock price of Tesla
-    - What’s the stock value of Google right now?
-    - How much is Amazon stock trading at?
-    - Check the stock price of Facebook for me
+  # Intent to check exchange rate
+  - intent: check_currency
+    examples: |
+      - What is the exchange rate from [USD](currency_from) to [EUR](currency_to)?
+      - Convert [100](amount) [USD](currency_from) to [INR](currency_to)
+      - How much is [50](amount) [EUR](currency_from) in [GBP](currency_to)?
+      - Show me the exchange rate from [JPY](currency_from) to [AUD](currency_to)
+      - I want to convert [1000](amount) [CAD](currency_from) to [USD](currency_to)
+      - How much is [500](amount) [USD](currency_from) in [JPY](currency_to)?
+      - Give me the rate for [USD](currency_from) to [INR](currency_to)
