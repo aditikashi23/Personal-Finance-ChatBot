@@ -11,23 +11,6 @@ The **Personal Finance Chatbot** is an interactive virtual assistant built using
 - **Currency Conversion**: Users can inquire about real-time currency exchange rates and convert amounts between different currencies.
 - **Stock Price Inquiry**: Users can check the latest stock prices for various stocks by specifying the stock symbol.
 
-## Getting Started
-
-Follow these steps to set up and run the Personal Finance Chatbot locally:
-
-### Prerequisites
-
-- Python 3.7 or later
-- Rasa installed (you can install it using pip)
-
-### Installation Steps
-
-1. **Clone the Repository**
-2. **Install Rasa**
-3. **Run** rasa train
-4. **Run** rasa run actions in another terminal
-5. **Run** rasa shell --model "model_path"
-
 
 
 
